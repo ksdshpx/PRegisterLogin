@@ -11,6 +11,10 @@
         <servlet-name>RegisterServlet</servlet-name>
         <servlet-class>cn.ksdshpx.user.web.servlet.RegisterServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>VerifyCodeServlet</servlet-name>
+        <servlet-class>cn.ksdshpx.user.web.servlet.VerifyCodeServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -18,5 +22,9 @@
     <servlet-mapping>
         <servlet-name>RegisterServlet</servlet-name>
         <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>VerifyCodeServlet</servlet-name>
+        <url-pattern>/VerifyCodeServlet</url-pattern>
     </servlet-mapping>
 </web-app>
