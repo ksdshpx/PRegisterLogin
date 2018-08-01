@@ -13,10 +13,11 @@
 </head>
 <body>
     <h1>注册</h1>
+    <p style="color: red;font-weight: bold">${msg}</p>
     <%--<form action="${pageContext.request.contentPath}/RegisterServlet'/>" method="post">--%>
     <form action="<c:url value='/RegisterServlet'/>" method="post">
-        用户名:<input type="text" name="username"/><br/>
-        密  码:<input type="password" name="password"/><br/>
+        用户名:<input type="text" name="username" value="${user.username}"/><br/>
+        密  码:<input type="password" name="password" value="${user.password}"/><br/>
         <input type="submit" value="注册"/>
     </form>
 </body>
