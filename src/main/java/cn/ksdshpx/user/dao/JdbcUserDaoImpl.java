@@ -62,10 +62,10 @@ public class JdbcUserDaoImpl implements UserDao {
             conn = JdbcUtils.getConnection();
             String sql = "INSERT INTO t_user(username,password,age,gender) VALUES(?,?,?,?)";
             pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, "zhangSan");
-            pstmt.setString(2, "123");
-            pstmt.setInt(3, 25);
-            pstmt.setString(4, "male");
+            pstmt.setString(1, user.getUsername());
+            pstmt.setString(2, user.getPassword());
+            pstmt.setInt(3, user.getAge());
+            pstmt.setString(4, user.getGender());
             pstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
