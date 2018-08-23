@@ -64,8 +64,8 @@ public class JdbcUserDaoImpl implements UserDao {
             pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, user.getUsername());
             pstmt.setString(2, user.getPassword());
-            pstmt.setInt(3, user.getAge());
-            pstmt.setString(4, user.getGender());
+            pstmt.setInt(3, 25);
+            pstmt.setString(4, "male");
             pstmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
