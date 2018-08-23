@@ -10,21 +10,21 @@ import org.junit.Test;
  * Time: 9:45
  * Description:Dao层单元测试
  */
-public class UserDaoTest {
+public class UserDaoImplTest {
 
     @Test
     public void testFindByUsername() {
-        UserDao userDao = new UserDao();
+        UserDaoImpl userDao = new UserDaoImpl();
         User user = userDao.findByUsername("赵六");
         System.out.println(user);
     }
 
     @Test
     public void testAdd() {
-        UserDao userDao = new UserDao();
+        UserDaoImpl userDaoImpl = new UserDaoImpl();
         User user = new User();
         user.setUsername("王五");
         user.setPassword("wangWu");
-        userDao.add(user);
+        userDaoImpl.add(user);
     }
 }

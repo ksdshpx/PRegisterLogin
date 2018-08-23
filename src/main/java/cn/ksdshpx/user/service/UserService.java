@@ -1,5 +1,6 @@
 package cn.ksdshpx.user.service;
 
+import cn.ksdshpx.user.dao.DaoFactory;
 import cn.ksdshpx.user.dao.UserDao;
 import cn.ksdshpx.user.domain.User;
 import cn.ksdshpx.user.exception.UserException;
@@ -12,7 +13,7 @@ import cn.ksdshpx.user.exception.UserException;
  * Description:业务处理类UserService
  */
 public class UserService {
-    private UserDao userDao = new UserDao();
+    private UserDao userDao = DaoFactory.getUserDao();
 
     /**
      * 注册功能
